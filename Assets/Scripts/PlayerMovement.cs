@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour {
         // Get input axis for movement
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-
+        
         // Calculate movement direction
         Vector3 moveDirection = new Vector3(horizontal, 0, vertical).normalized;
         moveDirection = transform.TransformDirection(moveDirection);
