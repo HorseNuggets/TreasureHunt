@@ -13,11 +13,17 @@ public class PlayerMovement : MonoBehaviour {
         cameraTransform = GetComponentInChildren<Camera>().transform;
     }
 
+    private void ApplyGravity() {
+        characterController.Move(Vector3.down * 9.81f * Time.deltaTime);
+    }
+
     private void Update() {
 
         // Get input axis for movement
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+
+        ApplyGravity();
         
         // Calculate movement direction
         Vector3 moveDirection = new Vector3(horizontal, 0, vertical).normalized;
