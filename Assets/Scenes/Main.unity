@@ -495,6 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066562771}
   - component: {fileID: 1066562770}
+  - component: {fileID: 1066562772}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -517,7 +518,7 @@ MonoBehaviour:
   treasurePrefab: {fileID: 5085973035627505789, guid: 4d57cbe95a843ee4eb2ae5bc662f378b,
     type: 3}
   treasuresContainer: {fileID: 194334461}
-  numberOfTreasures: 30
+  numberOfTreasures: 5
 --- !u!4 &1066562771
 Transform:
   m_ObjectHideFlags: 0
@@ -533,6 +534,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1066562772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066562769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f957d94fb38b52145a340df95fa16b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treasuresContainer: {fileID: 194334461}
 --- !u!1 &1151610906
 GameObject:
   m_ObjectHideFlags: 0

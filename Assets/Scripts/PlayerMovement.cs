@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour {
         
         // Apply movement
         characterController.Move(moveDirection * Time.deltaTime);
-
+        
         // Get mouse input for rotation
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
@@ -43,5 +43,11 @@ public class PlayerMovement : MonoBehaviour {
 
         // Apply rotation
         transform.Rotate(playerRotation);
+
+        if (characterController.isGrounded) {
+            if (Input.GetButtonDown("Jump")) {
+                characterController.Move(Vector3.up * 5f * Time.deltaTime);
+            }
+        }
     }
 }
