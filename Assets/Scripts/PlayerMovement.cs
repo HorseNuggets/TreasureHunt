@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 moveDirection = new Vector3(horizontal, 0, vertical).normalized;
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection *= moveSpeed;
-
+        
         // Apply movement
         characterController.Move(moveDirection * Time.deltaTime);
 
